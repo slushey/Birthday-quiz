@@ -1,8 +1,8 @@
 """
 birthday.py
-Author: <your name here>
+Author: Alice Frederick
 Credit: <list sources used, if any>
-Assignment:
+Assignment: Birthday Quiz
 
 Your program will ask the user the following questions, in this order:
 
@@ -31,3 +31,14 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
+import datetime
+import month_name
+name = input('Hello, what is your name? ')
+month = input('Hi {0}, what was the name of the month you were born in? '.format(name))
+year = int(input('And what year were you born in, {0}? '.format(name)))
+day = int(input('And the day? '))
+
+
+print('{0}, you are a fall baby of the stone age.')
+
+
