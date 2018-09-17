@@ -31,14 +31,39 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
-import datetime
-import month_name
+from datetime import datetime
+from calendar import month_name
+todaymonth = datetime.today().month
+todaydate = datetime.today().day
+
 name = input('Hello, what is your name? ')
 month = input('Hi {0}, what was the name of the month you were born in? '.format(name))
 year = int(input('And what year were you born in, {0}? '.format(name)))
 day = int(input('And the day? '))
 
+if month == "December" or "January" or "February":
+    print('{0}, you are a winter baby'.format(name))
+elif month == "March" or "April" or "May":
+    print('{0}, you are a spring baby'.format(name))
+elif month == "June" or "July" or "August":
+    print('{0}, you are a summer baby'.format(name))
+elif month == "September" or "October" or "November":
+    print('{0}, you are a fall baby'.format(name))
+    
+if year < 1980 :
+    print('of the Stone Age')
+if year in [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989]:
+    print('of the eighties')
+if year in [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]:
+    print('of the nineties')
+if year >= 2000:
+    print('of the two thousands')
+    
+if todaydate == 
 
-print('{0}, you are a fall baby of the stone age.')
+
+
+
+
 
 
