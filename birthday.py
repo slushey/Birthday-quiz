@@ -1,7 +1,7 @@
 """
 birthday.py
 Author: Alice Frederick
-Credit: Tutorials, and then someone who took CP last year
+Credit: Tutorials, and then my friend Emma S. 
 Assignment: Birthday Quiz
 
 Your program will ask the user the following questions, in this order:
