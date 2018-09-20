@@ -1,7 +1,7 @@
 """
 birthday.py
 Author: Alice Frederick
-Credit: <list sources used, if any>
+Credit: Tutorials, and then someone who took CP last year
 Assignment: Birthday Quiz
 
 Your program will ask the user the following questions, in this order:
@@ -41,25 +41,31 @@ month = input('Hi {0}, what was the name of the month you were born in? '.format
 year = int(input('And what year were you born in, {0}? '.format(name)))
 day = int(input('And the day? '))
 
-if month == "December" or "January" or "February":
-    print('{0}, you are a winter baby'.format(name))
-elif month == "March" or "April" or "May":
-    print('{0}, you are a spring baby'.format(name))
-elif month == "June" or "July" or "August":
-    print('{0}, you are a summer baby'.format(name))
-elif month == "September" or "October" or "November":
-    print('{0}, you are a fall baby'.format(name))
+if month is 'October' and day == 31:
+    print('You were born on Halloween!')
+elif month == todaymonth and todaydate == day:
+    print("Happy birthday!")
     
-if year < 1980 :
-    print('of the Stone Age')
+    
+elif month == "December" or month == "January" or month == "February":
+    season = 'you are a winter baby'
+elif month == "March" or month == "April" or month == "May":
+    season = 'you are a spring baby'
+elif month == "June" or month == "July" or month == "August":
+    season = 'you are a summer baby'
+elif month == "September" or month == "October" or month == "November":
+    season = 'you are a fall baby'
+    
+if year < 1980:
+    era = 'of the Stone Age'
 if year in [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989]:
-    print('of the eighties')
+    era = 'of the eighties'
 if year in [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]:
-    print('of the nineties')
+    era = 'of the nineties'
 if year >= 2000:
-    print('of the two thousands')
+    era = 'of the two thousands'
     
-if todaydate == 
+print('{0}, {1} {2}.'.format(name, season, era))
 
 
 
