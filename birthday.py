@@ -1,7 +1,7 @@
 """
 birthday.py
 Author: Alice Frederick
-Credit: Tutorials, and then my friend Emma S. 
+Credit: Tutorials, Mr. Dennison, and then my friend Emma S. 
 Assignment: Birthday Quiz
 
 Your program will ask the user the following questions, in this order:
@@ -41,32 +41,56 @@ month = input('Hi {0}, what was the name of the month you were born in? '.format
 year = int(input('And what year were you born in, {0}? '.format(name)))
 day = int(input('And the day? '))
 
+if month == "January":
+    month = 1
+if month == "February":
+    month = 2
+if month == "March":
+    month = 3
+if month == "April":
+    month = 4
+if month == "May":
+    month = 5
+if month == "June":
+    month = 6
+if month == "July":
+    month = 7
+if month == "August":
+    month = 8
+if month == "September":
+    month = 9
+if month == "October":
+    month = 10
+if month == "November":
+    month = 11
+if month == "December":
+    month = 12
+
 if month is 'October' and day == 31:
     print('You were born on Halloween!')
-elif month == todaymonth and todaydate == day:
+elif month == todaymonth and day == todaydate:
     print("Happy birthday!")
+else:
+    if month == "December" or month == "January" or month == "February":
+        season = 'you are a winter baby'
+    elif month == "March" or month == "April" or month == "May":
+        season = 'you are a spring baby'
+    elif month == "June" or month == "July" or month == "August":
+        season = 'you are a summer baby'
+    elif month == "September" or month == "October" or month == "November":
+        season = 'you are a fall baby'
+        
+    if year < 1980:
+        era = 'of the Stone Age'
+    if year in [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989]:
+        era = 'of the eighties'
+    if year in [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]:
+        era = 'of the nineties'
+    if year >= 2000:
+        era = 'of the two thousands'
+        
+    print('{0}, {1} {2}.'.format(name, season, era))
     
-    
-elif month == "December" or month == "January" or month == "February":
-    season = 'you are a winter baby'
-elif month == "March" or month == "April" or month == "May":
-    season = 'you are a spring baby'
-elif month == "June" or month == "July" or month == "August":
-    season = 'you are a summer baby'
-elif month == "September" or month == "October" or month == "November":
-    season = 'you are a fall baby'
-    
-if year < 1980:
-    era = 'of the Stone Age'
-if year in [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989]:
-    era = 'of the eighties'
-if year in [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]:
-    era = 'of the nineties'
-if year >= 2000:
-    era = 'of the two thousands'
-    
-print('{0}, {1} {2}.'.format(name, season, era))
-
 
 
 
